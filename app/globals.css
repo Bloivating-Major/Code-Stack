@@ -103,6 +103,7 @@
   .hover\:bg-primary-foreground:hover { background-color: hsl(var(--primary-foreground)); }
 
   .text-primary { color: hsl(var(--primary)); }
+  .text-foreground { color: hsl(var(--foreground)); }
   .text-primary-foreground { color: hsl(var(--primary-foreground)); }
   .hover\:text-primary:hover { color: hsl(var(--primary)); }
   .hover\:text-primary-foreground:hover { color: hsl(var(--primary-foreground)); }
@@ -114,6 +115,8 @@
   .hover\:ring-primary:hover { --tw-ring-color: hsl(var(--primary)); }
 
   .bg-primary\/50 { background-color: hsl(var(--primary) / 0.5); }
+  .bg-primary\/90 { background-color: hsl(var(--primary) / 0.9); }
+  .bg-background { background-color: hsl(var(--background)); }
   .text-primary\/70 { color: hsl(var(--primary) / 0.7); }
 
   /* ----------------------- */

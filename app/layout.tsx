@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://your-saas.com"),
   title: {
-    default: "SaaSify - Transform Your Business with AI-Powered Solutions",
+    default: "The Code Stack - Transform Your Business with AI-Powered Solutions",
     template: "%s | SaaSify",
   },
   description:
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaSify - Transform Your Business with AI-Powered Solutions",
+    title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Revolutionize your workflow with our cutting-edge SaaS platform. Boost productivity by 300% with AI-powered automation.",
     images: ["/og-image.jpg"],
