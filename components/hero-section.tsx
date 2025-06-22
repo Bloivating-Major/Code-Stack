@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Star } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const words = ["AI", "WEB 3", "Gen AI", "Beyond"];
+const words = ["AI", "WEB 3", "Gen AI", "& Beyond"];
 
 export function HeroSection() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -48,7 +48,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full container mx-auto">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen items-center gap-16">
           {/* Content */}
           <motion.div
             className="text-center lg:text-left"
@@ -102,8 +102,8 @@ export function HeroSection() {
                 size="lg"
                 className="group w-full sm:w-auto"
               >
-                <Play className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Watch Demo
+                <Phone className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                Schedule a Call
               </Button>
             </motion.div>
 
@@ -132,45 +132,20 @@ export function HeroSection() {
 
           {/* Hero Image */}
           <motion.div
-            className="relative w-full max-w-xl mx-auto"
+            className="relative w-full h-full flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
-            <div className="relative glass-effect rounded-2xl p-6 sm:p-8 group">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl transition-all duration-500" />
               <Image
                 src="/image2.webp"
                 alt="SaaS Dashboard Preview"
-                width={800}
-                height={600}
-                className="relative z-10 rounded-lg shadow-2xl w-full h-auto object-contain"
+                fill
+                className="relative z-10 rounded-lg shadow-2xl object-cover"
                 priority
               />
-
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-green-800 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium"
-                animate={{ y: [-5, 5, -5] }}
-                transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-              >
-                +300% Growth
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 glass-effect px-3 sm:px-4 py-2 rounded-lg"
-                animate={{ y: [5, -5, 5] }}
-                transition={{
-                  duration: 3,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: 1,
-                }}
-              >
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-xs sm:text-sm">Live Analytics</span>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>
