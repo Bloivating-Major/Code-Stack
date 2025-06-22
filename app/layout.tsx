@@ -34,16 +34,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://your-saas.com",
-    title: "SaaSify - Transform Your Business with AI-Powered Solutions",
+    title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
     description:
-      "Revolutionize your workflow with our cutting-edge SaaS platform. Boost productivity by 300% with AI-powered automation.",
-    siteName: "SaaSify",
+      "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
+    siteName: "The Code Stack",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SaaSify - AI-Powered SaaS Platform",
+        alt: "The Code Stack - AI-Powered Platform",
       },
     ],
   },
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
     description:
-      "Revolutionize your workflow with our cutting-edge SaaS platform. Boost productivity by 300% with AI-powered automation.",
+      "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
     images: ["/og-image.jpg"],
-    creator: "@saasify",
+    creator: "@unicodez",
   },
   robots: {
     index: true,

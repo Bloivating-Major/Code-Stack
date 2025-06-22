@@ -6,7 +6,7 @@ import { ArrowRight, Play, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const words = ["Productivity", "Efficiency", "Growth", "Success"];
+const words = ["AI", "WEB 3", "Gen AI", "Beyond"];
 
 export function HeroSection() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -39,7 +39,7 @@ export function HeroSection() {
   }, [displayText, isDeleting, currentWordIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 max-sm:pt-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5" />
       <div className="absolute inset-0">
@@ -63,7 +63,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Transform Your{" "}
+              Build What&#39;s Next:{" "}
               <span className="text-gradient relative">
                 {displayText}
                 <motion.span
@@ -72,8 +72,6 @@ export function HeroSection() {
                   transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
                 />
               </span>
-              <br className="hidden sm:block" />
-              with AI-Powered SaaS
             </motion.h1>
 
             {/* Description */}
@@ -83,9 +81,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Revolutionize your workflow with our cutting-edge platform. Boost
-              productivity by 300% with AI-powered automation, real-time
-              analytics, and seamless integrations.
+              Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality&#8209;bending experiences, all under one stack.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -97,7 +93,7 @@ export function HeroSection() {
             >
               <Button size="lg" className="glow-effect group w-full sm:w-auto">
                 <span className="relative z-10 flex items-center justify-center">
-                  Start Free Trial
+                  Start Your AI Journey
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>

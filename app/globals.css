@@ -94,6 +94,8 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  /* .bg-background { background-color: hsl(var(--background));} */
+  .bg-background\/95 { background-color: hsl(var(--background) / 0.95); }
    /* ----------------------- */
   /* 🎨 Primary */
   /* ----------------------- */
@@ -109,6 +111,7 @@
   .hover\:text-primary-foreground:hover { color: hsl(var(--primary-foreground)); }
 
   .border-primary { border-color: hsl(var(--primary)); }
+  .border-border\/50 { border-color: hsl(var(--border) / 0.5); }
   .hover\:border-primary:hover { border-color: hsl(var(--primary)); }
 
   .ring-primary { --tw-ring-color: hsl(var(--primary)); }
@@ -162,6 +165,7 @@
   /* 😶 Muted */
   /* ----------------------- */
   .bg-muted { background-color: hsl(var(--muted)); }
+  .bg-muted\/30 { background-color: hsl(var(--muted) / 0.3); }
   .text-muted { color: hsl(var(--muted)); }
   .text-muted-foreground { color: hsl(var(--muted-foreground)); }
 

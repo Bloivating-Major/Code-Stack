@@ -7,11 +7,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
 const navigation = [
+  { name: "Solutions", href: "#solutions" },
   { name: "Features", href: "#features" },
-  { name: "Testimonials", href: "#testimonials" },
   { name: "Pricing", href: "#pricing" },
+  { name: "Resources", href: "#resources" },
   { name: "Contact", href: "#contact" },
 ];
 
