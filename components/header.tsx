@@ -26,8 +26,8 @@ export function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <nav className="container mx-auto sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 px-4">
           {/* Logo */}
           <motion.div
             className="flex items-center space-x-2"
@@ -65,11 +65,8 @@ export function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
             <Button size="sm" className="glow-effect group">
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10">Start Building Smarter</span>
             </Button>
           </div>
 
@@ -95,13 +92,13 @@ export function Header() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              className="md:hidden"
+              className="md:hidden h-screen"
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
+              animate={{ opacity: 1, height: "100vh" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border/50">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border/50 h-screen w-full">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -113,10 +110,7 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="flex flex-col space-y-2 px-3 pt-4">
-                  <Button variant="ghost" size="sm">
-                    Sign In
-                  </Button>
-                  <Button size="sm">Get Started</Button>
+                  <Button size="sm">Start Building Smarter</Button>
                 </div>
               </div>
             </motion.div>

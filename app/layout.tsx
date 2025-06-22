@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "The Code Stack",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "The Code Stack - AI-Powered Platform",
