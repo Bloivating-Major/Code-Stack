@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -9,9 +9,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 const navigation = [
   { name: "Solutions", href: "#solutions" },
-  { name: "Features", href: "#features" },
-  { name: "Pricing", href: "#pricing" },
   { name: "Resources", href: "#resources" },
+  { name: "About Us", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
 

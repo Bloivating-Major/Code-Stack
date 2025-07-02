@@ -7,10 +7,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-saas.com"),
+  metadataBase: new URL("https://codez-stack.vercel.app/"),
   title: {
     default: "The Code Stack - Transform Your Business with AI-Powered Solutions",
-    template: "%s | SaaSify",
+    template: "%s | Unicodez",
   },
   description:
     "Revolutionize your workflow with our cutting-edge SaaS platform. Boost productivity by 300% with AI-powered automation, real-time analytics, and seamless integrations.",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "business tools",
     "analytics",
   ],
-  authors: [{ name: "SaaSify Team" }],
-  creator: "SaaSify",
-  publisher: "SaaSify",
+  authors: [{ name: "Unicodez Team" }],
+  creator: "Unicodez",
+  publisher: "Unicodez",
   formatDetection: {
     email: false,
     address: false,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-saas.com",
+    url: "https://codez-stack.vercel.app/",
     title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
@@ -70,6 +70,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
 };
+
 
 export default function RootLayout({
   children,
