@@ -42,7 +42,12 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-muted/30 border-t border-border/50">
+    <footer id="contact" className="border-t border-border/50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-500/10 to-pink-500/10" />
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-16">
@@ -60,7 +65,7 @@ export function Footer() {
                   <Zap className="h-8 w-8 text-primary" />
                   <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
                 </div>
-                <span className="text-xl font-bold text-gradient">SaaSify</span>
+                <span className="text-xl font-bold text-gradient">The Code Stack</span>
               </Link>
               <p className="text-muted-foreground mb-6 max-w-md">
                 Transform your business with AI-powered automation and real-time
@@ -124,7 +129,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-muted-foreground text-sm mb-4 sm:mb-0">
-            © {new Date().getFullYear()} SaaSify. All rights reserved.
+            © {new Date().getFullYear()} The Code Stack. All rights reserved.
           </p>
 
           {/* Social Links */}

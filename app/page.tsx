@@ -1,9 +1,10 @@
 import { CTASection } from "@/components/cta-section"
-import { SolutionsSection } from "@/components/solutions-section"
-import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { SolutionsSection } from "@/components/solutions-section"
 import { ResourcesSection } from "@/components/resources-section"
+import { AboutUsSection } from "@/components/aboutUs-section"
+import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <HeroSection />
       <SolutionsSection />
       <ResourcesSection />
+      <AboutUsSection />
       <CTASection />
       <Footer />
     </main>
