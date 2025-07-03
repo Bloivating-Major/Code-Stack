@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center max-w-4xl mx-auto"
@@ -45,8 +45,7 @@ export function CTASection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Join thousands of teams who have already revolutionized their workflow. Start your free trial today and
-            experience the future of productivity.
+            Start your journey to automation consult us and experience the magic of AI integration with the most affordable, future-ready solutions designed to scale your business intelligently.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -59,35 +58,10 @@ export function CTASection() {
           >
             <Button size="lg" className="glow-effect group">
               <span className="relative z-10 flex items-center">
-                Start Free Trial
+                Consult Us, Its Free!
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
-            <Button variant="outline" size="lg">
-              Schedule Demo
-            </Button>
-          </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mt-12 text-sm text-muted-foreground"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
-              <span>14-day free trial</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
-              <span>No credit card required</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full" />
-              <span>Cancel anytime</span>
-            </div>
           </motion.div>
         </motion.div>
       </div>
