@@ -3,41 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Zap, Twitter, Github, Linkedin, Mail } from "lucide-react";
+import { Zap, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
-const footerLinks = {
-  product: [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "/integrations" },
-    { name: "API", href: "/api" },
-  ],
-  company: [
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
-  ],
-  resources: [
-    { name: "Documentation", href: "/docs" },
-    { name: "Help Center", href: "/help" },
-    { name: "Community", href: "/community" },
-    { name: "Status", href: "/status" },
-  ],
-  legal: [
-    { name: "Privacy", href: "/privacy" },
-    { name: "Terms", href: "/terms" },
-    { name: "Security", href: "/security" },
-    { name: "Cookies", href: "/cookies" },
-  ],
-};
-
 const socialLinks = [
-  { name: "Twitter", href: "#", icon: Twitter },
-  { name: "GitHub", href: "#", icon: Github },
   { name: "LinkedIn", href: "#", icon: Linkedin },
-  { name: "Email", href: "mailto:hello@saasify.com", icon: Mail },
+  { name: "Email", href: "mailto:hello@thecodestack.com", icon: Mail },
 ];
 
 export function Footer() {
@@ -48,6 +19,7 @@ export function Footer() {
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-16">
@@ -93,30 +65,25 @@ export function Footer() {
               </div>
             </motion.div>
 
-            {/* Links */}
-            {Object.entries(footerLinks).map(([category, links], index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h4 className="font-semibold mb-4 capitalize">{category}</h4>
-                <ul className="space-y-3">
-                  {links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            {/* Google Map - New Jersey */}
+            <motion.div
+              className="lg:col-span-4 h-72 rounded-md overflow-hidden shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <iframe
+                title="New Jersey Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12180.389177123353!2d-74.4056618!3d40.0583238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1e82a15f78b25%3A0x7cb5d47f5f2c5f59!2sNew%20Jersey%2C%20USA!5e0!3m2!1sen!2sin!4v1718123456789"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </motion.div>
           </div>
         </div>
 
