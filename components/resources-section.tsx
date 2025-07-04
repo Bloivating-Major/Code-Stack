@@ -44,14 +44,14 @@ const resourceCards = [
     title: "Social",
     icon: <Globe className="h-6 w-6 text-primary" />,
     description:
-      "Follow us on X, LinkedIn, and YouTube. We post smart stuff, often. ",
+      "Follow us on LinkedIn. We post smart stuff, often. ",
     href: "/social",
   },
 ];
 
 export function ResourcesSection() {
   return (
-    <section id="resources" className="py-24 bg-muted/30">
+    <section id="resources" className="py-12 bg-muted/30">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">

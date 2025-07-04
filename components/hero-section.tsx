@@ -106,28 +106,6 @@ export function HeroSection() {
                 Schedule a Call
               </Button>
             </motion.div>
-
-            {/* Social Proof */}
-            <motion.div
-              className="flex items-center justify-center lg:justify-start space-x-4 sm:space-x-6 mt-10 sm:mt-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <div className="flex items-center space-x-1">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-primary to-purple-500 border-2 border-background"
-                    />
-                  ))}
-                </div>
-                <span className="text-sm sm:text-base text-muted-foreground ml-3">
-                  Join 10,000+ happy customers
-                </span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Hero Image */}

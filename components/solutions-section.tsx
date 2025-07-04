@@ -44,7 +44,7 @@ const solutions = [
 
 export function SolutionsSection() {
   return (
-    <section id="solutions" className="py-24 bg-muted/30">
+    <section id="solutions" className="py-12 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -101,24 +101,6 @@ export function SolutionsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-muted-foreground mb-6"> Let’s Build Your Stack!</p>
-          <motion.button
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-purple-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore Use Cases
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   )
