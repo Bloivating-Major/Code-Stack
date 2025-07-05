@@ -44,7 +44,7 @@ const solutions = [
 
 export function SolutionsSection() {
   return (
-    <section id="solutions" className="py-12 bg-muted/30">
+    <section id="solutions" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

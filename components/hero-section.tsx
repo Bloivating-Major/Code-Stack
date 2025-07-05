@@ -97,14 +97,6 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="group w-full sm:w-auto"
-              >
-                <Phone className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Schedule a Call
-              </Button>
             </motion.div>
           </motion.div>
 
