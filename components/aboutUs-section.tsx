@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Gem, Rocket, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const team = [
   {
     name: "Pramod Shukl",
     role: "CEO",
+    icon: Crown,
     description:
       "Visionary strategist and serial founder with a track record of scaling tech ventures. Drives Coderstack’s vision and growth with a deep focus on impact and innovation.",
     gradient: "from-blue-500 to-cyan-500",
@@ -15,6 +16,7 @@ const team = [
   {
     name: "Anmol Shrivastava",
     role: "CFO",
+    icon: Gem,
     description:
       "Finance leader with experience across venture-backed startups and SaaS growth. Builds sustainable models to turn innovation into scale.",
     gradient: "from-purple-500 to-pink-500",
@@ -22,6 +24,7 @@ const team = [
   {
     name: "Saurav Yadav",
     role: "CTO",
+    icon: Rocket,
     description:
       "Tech architect with expertise in GenAI, LLMs, and cloud systems. Leads product, engineering, and the evolving Coderstack stack.",
     gradient: "from-orange-500 to-red-500",
@@ -30,7 +33,7 @@ const team = [
 
 export function AboutUsSection() {
   return (
-    <section id="about-us" className="py-12 bg-muted/30">
+    <section id="about-us" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
         {/* What is Coderstack? */}
@@ -77,12 +80,25 @@ export function AboutUsSection() {
                   <div
                     className={`absolute inset-0 bg-gradient-to-r ${member.gradient} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-300`}
                   />
+
+                  {/* Icon / Avatar Placeholder */}
+                  <div
+                    className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${member.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <member.icon className="h-6 w-6 text-white" />
+                  </div>
+
                   {/* Name + Role */}
                   <h4 className="text-2xl font-bold mb-1">{member.name}</h4>
-                  <p className="text-md text-primary mb-4 text-bold">{member.role}</p>
+                  <p className="text-md text-primary font-medium mb-4">{member.role}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {member.description}
                   </p>
+
+                  {/* Subtle Glow Border */}
+                  <div
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${member.gradient} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300`}
+                  />
                 </div>
               </motion.div>
             ))}
@@ -97,8 +113,8 @@ export function AboutUsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3  className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gradient">Careers</h3>
-          <p  className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gradient">Careers</h3>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             Join a team shaping how the world works. We hire thinkers,
             tinkerers, and builders.
           </p>
