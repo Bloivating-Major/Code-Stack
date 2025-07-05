@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://codez-stack.vercel.app/"),
   title: {
-    default: "The Code Stack - Transform Your Business with AI-Powered Solutions",
+    default: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
     template: "%s | Unicodez",
   },
   description:
@@ -34,22 +34,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://codez-stack.vercel.app/",
-    title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
+    title: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
-    siteName: "The Code Stack",
+    siteName: "The Coder Stack",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "The Code Stack - AI-Powered Platform",
+        alt: "The Coder Stack - AI-Powered Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Code Stack - Transform Your Business with AI-Powered Solutions",
+    title: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
     images: ["/og-image.jpg"],
