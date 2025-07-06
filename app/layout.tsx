@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codez-stack.vercel.app/"),
+  metadataBase: new URL("https://www.thecoderstacks.com/"),
   title: {
     default: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
     template: "%s | Unicodez",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://codez-stack.vercel.app/",
+    url: "https://www.thecoderstacks.com/",
     title: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
@@ -90,6 +91,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster richColors closeButton/>
         </ThemeProvider>
       </body>
     </html>
