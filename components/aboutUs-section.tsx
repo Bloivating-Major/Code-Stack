@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Briefcase, Gem, Rocket, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { ContactFormModal } from "./contact-form-modal";
 
 const team = [
   {
@@ -32,6 +34,7 @@ const team = [
 ];
 
 export function AboutUsSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="about-us" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
@@ -118,12 +121,13 @@ export function AboutUsSection() {
             Join a team shaping how the world works. We hire thinkers,
             tinkerers, and builders.
           </p>
-          <Button size="lg" className="glow-effect group">
+          <Button onClick={() => setIsModalOpen(true)} size="lg" className="glow-effect group">
             <Briefcase className="size-4 mr-2" />
             View Open Roles
           </Button>
         </motion.div>
       </div>
+       <ContactFormModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }

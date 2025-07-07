@@ -128,7 +128,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-muted-foreground text-sm mb-4 sm:mb-0">
-            © {new Date().getFullYear()} The Code Stack. All rights reserved.
+            © {new Date().getFullYear()} The Coder Stack. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
             {socialLinks.map((social) => (

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ContactFormModal } from "./contact-form-modal";
 
 const words = ["AI", "WEB 3", "Gen AI", "& Beyond"];
 
@@ -12,6 +13,7 @@ export function HeroSection() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
@@ -91,11 +93,13 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <Button size="lg" className="glow-effect group w-full sm:w-auto">
-                <span className="relative z-10 flex items-center justify-center">
-                  Start Your AI Journey
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </span>
+              <Button
+                size="lg"
+                onClick={() => setIsModalOpen(true)}
+                className="glow-effect group"
+              >
+                Start Your AI Journey
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
           </motion.div>
@@ -120,6 +124,7 @@ export function HeroSection() {
           </motion.div>
         </div>
       </div>
+      <ContactFormModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );
 }

@@ -17,6 +17,7 @@ const navigation = [
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <motion.header
@@ -50,7 +51,7 @@ export function Header() {
                 <motion.div key={item.name}>
                   <ContactFormModal
                     trigger={
-                      <button className="text-muted-foreground hover:text-foreground transition-colors duration-200 relative group">
+                      <button className="text-muted-foreground cursor-pointer hover:text-foreground transition-colors duration-200 relative group">
                         {item.name}
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                       </button>
@@ -74,7 +75,7 @@ export function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Button size="sm" className="glow-effect group">
+            <Button size="sm" className="glow-effect group cursor-pointer" onClick={() => setShowModal(true)}>
               <span className="relative z-10">Start Building Smarter</span>
             </Button>
           </div>
@@ -124,6 +125,7 @@ export function Header() {
                     <motion.div key={item.name}>
                       <Link
                         href={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
                         className="text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
                       >
                         {item.name}
@@ -134,12 +136,21 @@ export function Header() {
                 )}
 
                 <div className="flex flex-col space-y-2 px-3 pt-4">
-                  <Button size="sm">Start Building Smarter</Button>
+                  <Button
+                    size="sm"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false); // Close the mobile nav
+                      setShowModal(true);         // Show modal
+                    }}
+                  >
+                    Start Building Smarter
+                  </Button>
                 </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+        <ContactFormModal open={showModal} onOpenChange={setShowModal} />
       </nav>
     </motion.header>
   );
