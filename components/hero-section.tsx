@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ContactFormModal } from "./contact-form-modal";
 
 const words = ["AI", "WEB 3", "Gen AI", "& Beyond"];
@@ -17,113 +16,86 @@ export function HeroSection() {
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          if (displayText.length < currentWord.length) {
-            setDisplayText(currentWord.slice(0, displayText.length + 1));
-          } else {
-            setTimeout(() => setIsDeleting(true), 2000);
-          }
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (displayText.length < currentWord.length) {
+          setDisplayText(currentWord.slice(0, displayText.length + 1));
         } else {
-          if (displayText.length > 0) {
-            setDisplayText(displayText.slice(0, -1));
-          } else {
-            setIsDeleting(false);
-            setCurrentWordIndex((prev) => (prev + 1) % words.length);
-          }
+          setTimeout(() => setIsDeleting(true), 2000);
         }
-      },
-      isDeleting ? 50 : 100
-    );
+      } else {
+        if (displayText.length > 0) {
+          setDisplayText(displayText.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentWordIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 max-sm:pt-20">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5" />
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 text-white">
+      {/* Background GIF */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/hero.gif" // Replace with your GIF path
+          alt="Tech Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="relative z-10 w-full container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen items-center gap-16">
-          {/* Content */}
-          <motion.div
-            className="text-center lg:text-left"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-3xl">
+        <motion.h1
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Build What&#39;s Next:{" "}
+          <span className="text-gradient relative">
+            {displayText}
+            <motion.span
+              className="inline-block w-0.5 h-6 sm:h-8 lg:h-10 bg-primary ml-1"
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 1, repeat: Infinity }}
+            />
+          </span>
+        </motion.h1>
+
+        <motion.p
+          className="text-lg text-muted-foreground mb-8 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          Unleashing the future of technology with intelligent systems,
+          decentralized platforms, cloud-native tools, and
+          reality&#8209;bending experiences, all under one stack.
+        </motion.p>
+
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          <Button
+            size="lg"
+            onClick={() => setIsModalOpen(true)}
+            className="glow-effect group"
           >
-            {/* Headline */}
-            <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-snug sm:leading-tight mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Build What&#39;s Next:{" "}
-              <span className="text-gradient relative">
-                {displayText}
-                <motion.span
-                  className="inline-block w-0.5 h-6 sm:h-8 lg:h-10 bg-primary ml-1"
-                  animate={{ opacity: [0, 1, 0] }}
-                  transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
-                />
-              </span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality&#8209;bending experiences, all under one stack.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              <Button
-                size="lg"
-                onClick={() => setIsModalOpen(true)}
-                className="glow-effect group"
-              >
-                Start Your AI Journey
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </motion.div>
-          </motion.div>
-
-          {/* Hero Image */}
-          <motion.div
-            className="relative w-full h-full flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-          >
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl transition-all duration-500" />
-              <Image
-                src="/image2.webp"
-                alt="SaaS Dashboard Preview"
-                fill
-                className="relative z-10 rounded-lg shadow-2xl object-cover"
-                priority
-              />
-            </div>
-          </motion.div>
-        </div>
+            Start Your AI Journey
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </motion.div>
       </div>
+
+      {/* Modal */}
       <ContactFormModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   );

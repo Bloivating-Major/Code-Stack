@@ -10,8 +10,8 @@ import { toast } from "sonner";
 
 const socialLinks = [
   { name: "LinkedIn", href: "#", icon: Linkedin },
-  { name: "Email", href: "mailto:ops@thecoderstacks.com", icon: Mail },
-  { name: "Phone", href: "tel:5512772768", icon: Phone },
+  { name: "Email", href: "mailto:testmail@test.com", icon: Mail },
+  { name: "Phone", href: "tel:1111111111", icon: Phone },
 ];
 
 export function Footer() {
@@ -59,7 +59,7 @@ export function Footer() {
                   <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
                 </div>
                 <span className="text-xl font-bold text-gradient">
-                  The Coder Stack
+                  Stack
                 </span>
               </Link>
               <p className="text-muted-foreground mb-6 max-w-md">
@@ -74,7 +74,7 @@ export function Footer() {
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="h-5 w-5" />
-                  <span>ops@thecoderstacks.com</span>
+                  <span>testmail@test.com</span>
                 </a>
 
                 <a
@@ -82,7 +82,7 @@ export function Footer() {
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                  <span>+1 551-277-2768</span>
+                  <span>+1 111-111-1111</span>
                 </a>
 
                 <a
@@ -92,7 +92,7 @@ export function Footer() {
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <MapPin className="h-5 w-5" />
-                  <span>447 Broadway, New York, NY 10013</span>
+                  <span>444 Broadway, New York, NY 11111</span>
                 </a>
               </div>
             </motion.div>
@@ -128,7 +128,7 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-muted-foreground text-sm mb-4 sm:mb-0">
-            © {new Date().getFullYear()} The Coder Stack. All rights reserved.
+            © {new Date().getFullYear()} Stack. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
             {socialLinks.map((social) => (

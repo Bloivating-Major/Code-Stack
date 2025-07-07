@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thecoderstacks.com/"),
   title: {
-    default: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
+    default: "Stack - Transform Your Business with AI-Powered Solutions",
     template: "%s | Unicodez",
   },
   description:
@@ -34,23 +34,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.thecoderstacks.com/",
-    title: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
+    url: "",
+    title: "Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
-    siteName: "The Coder Stack",
+    siteName: "Stack",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "The Coder Stack - AI-Powered Platform",
+        alt: "Stack - AI-Powered Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Coder Stack - Transform Your Business with AI-Powered Solutions",
+    title: "Stack - Transform Your Business with AI-Powered Solutions",
     description:
       "Unleashing the future of technology with intelligent systems, decentralized platforms, cloud-native tools, and reality‑bending experiences, all under one stack.",
     images: ["/og-image.jpg"],

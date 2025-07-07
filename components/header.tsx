@@ -40,7 +40,7 @@ export function Header() {
                 <Image src="/logo.png" alt="logo" width={35} height={35} />
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
               </div>
-              <span className="text-xl font-bold text-gradient">The Coder Stack</span>
+              <span className="text-xl font-bold text-gradient">Stack</span>
             </Link>
           </motion.div>
 
